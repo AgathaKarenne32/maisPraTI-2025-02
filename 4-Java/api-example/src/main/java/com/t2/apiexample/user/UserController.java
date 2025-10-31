@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 import java.util.Map;
 
-@Tag(name = "Users")
+@Tag(name = "users")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -27,4 +27,6 @@ public class UserController {
                 "username", user.getUsername(),
                 "roles", user.getRoles());
     }
+
+
 }

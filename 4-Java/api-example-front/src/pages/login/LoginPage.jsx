@@ -1,55 +1,44 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../app/state/auth.jsx'
-import { BASE_URL } from '../../shared/api/client.js'
 
-export default function LoginPage() {
-    const { login } = useAuth()
-    const [form, setForm] = useState({
-        username: '',
-        password: ''
-    })
+function LoginPage() {
+    const { login, isAuthenticated } = useAuth()
+    const [form, setForm] = useState({ username: '', password: '' })
     const navigate = useNavigate()
 
-    const onChange = (event) => {
-        setForm({
-            ...form,
-            [event.target.name]: event.target.value
-        })
-    }
+    const onChange = (event) => setForm({ ...form, [event.target.name]: event.target.value })
 
     const onSubmit = async (event) => {
         event.preventDefault()
-
         try {
             await login(form.username, form.password)
-            navigate('/dashboard')
-        } catch (e) {
-            console.error('Login failed', e)
+            navigate('/home')
+        } catch (error) {
+            alert('Erro ao fazer login: ' + error.message)
         }
     }
 
+    if(isAuthenticated) return <div>Você já está autenticado - <Link to='/home'>Ir para página inicial</Link></div>
+
     return (
         <div>
-            <h1>Entre</h1>
             <form onSubmit={onSubmit}>
 
-                <div>
-                    <label>E-mail</label>
-                    <input type="email" name='username'value={form.username} onChange={onChange}/>
-                </div>
+                <label>Username</label>
+                <input type="text" name='username' value={form.username} onChange={onChange}/>
 
-                <div>
-                    <label>Senha</label>
-                    <input type="password" name='password' value={form.password} onChange={onChange}/>
-                </div>
+                <label>Senha</label>
+                <input type="password" name='password' value={form.password} onChange={onChange}/>
 
-                <div>
-                    <a href={`${BASE_URL}/oauth2/authorization/github`}>Faça o Login com o GitHub</a>
-                </div>
-
-                <button>Entrar</button>
+                <button>Login!</button>
             </form>
+
+            {/* <div>
+                <a href={`${VITE_API_BASE_URL}/oauth2/authorization/github`}>Entrar com GitHub</a>
+            </div> */}
         </div>
     )
 }
+
+export default LoginPage

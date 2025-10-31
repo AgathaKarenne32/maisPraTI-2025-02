@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef3fdd3a-490f-43c2-9b3e-fa5e3f7d23f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f7bf7dae-4e30-4a03-939d-b1e7bedc7188" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-hibernate-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-hibernate-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Cardapio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Comanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Comanda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Item_comanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Item_comanda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,48 +27,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="33qr2tCw6udVk8rdTGgZM7FdZ9T" />
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="33qcfKZv8fAKHtZYfQKQL4htHHo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Hyago/Documents/Trabalho/Codifica Edu/T2-2025/4-Java/jpa-hibernate-example/src/Main.java&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Hyago/Documents/Trabalho/Codifica Edu/T1-2025/4-Java/jpa-hibernate-example/src/Main.java",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="jpa-hibernate-example" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="jpa-hibernate-example" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hyago\Documents\Trabalho\Codifica Edu\T1-2025\4-Java\jpa-hibernate-example\src\main\resources" />
+      <recent name="C:\Users\Hyago\Documents\Trabalho\Codifica Edu\T1-2025\4-Java\jpa-hibernate-example" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -75,14 +73,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef3fdd3a-490f-43c2-9b3e-fa5e3f7d23f9" name="Changes" comment="" />
-      <created>1760055240928</created>
+      <changelist id="f7bf7dae-4e30-4a03-939d-b1e7bedc7188" name="Changes" comment="" />
+      <created>1760048144686</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1760055240928</updated>
-      <workItem from="1760055242708" duration="2782000" />
-      <workItem from="1760185628007" duration="302000" />
-      <workItem from="1760195873789" duration="313000" />
+      <updated>1760048144686</updated>
+      <workItem from="1760048145868" duration="3334000" />
     </task>
     <servers />
   </component>

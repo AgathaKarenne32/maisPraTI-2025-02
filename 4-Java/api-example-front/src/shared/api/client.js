@@ -1,20 +1,20 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://localhost:8080'
+const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
 
 function buildHeaders(token, extra = {}) {
     const headers = {
-        'Accept': 'application/json',
+        'Accepted': 'application/json',
         ...extra,
     }
-
+    
     if(token) headers['Authorization'] = `Bearer ${token}`
+
     return headers
 }
 
 async function handleResponse(response) {
-    const contentType = response.headers.get('Content-Type') || ''
-
+    const contentType = response.headers.get('Content-Type')
     let data = null
-    if(contentType.includes('application/json')) {
+    if(contentType && contentType.includes('application/json')) {
         data = await response.json()
     } else {
         const text = await response.text()
@@ -24,7 +24,7 @@ async function handleResponse(response) {
     if(!response.ok) {
         const error = new Error(data?.message || response.statusText)
         error.status = response.status
-        error.data = data
+        error.body = data
         throw error
     }
 
@@ -33,7 +33,7 @@ async function handleResponse(response) {
 
 export async function apiFetch(path, { method = 'GET', token, body, headers = {}, signal } = {}) {
     const init = {
-        method,
+        method, 
         credentials: 'include',
         headers: buildHeaders(token, headers),
         signal,
@@ -46,10 +46,10 @@ export async function apiFetch(path, { method = 'GET', token, body, headers = {}
             init.headers['Content-Type'] = 'application/json'
             init.body = JSON.stringify(body)
         }
-    }
+    } 
 
-    const response = await fetch(`${BASE_URL}${path}`, init)
+    const response = await fetch(`${VITE_API_BASE_URL}${path}`, init)
     return handleResponse(response)
 }
 
-export { BASE_URL}
+export { VITE_API_BASE_URL}

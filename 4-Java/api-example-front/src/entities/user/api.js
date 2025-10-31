@@ -1,5 +1,5 @@
-import { apiFetch } from '../../shared/api/client.js'
+import { apiFetch } from "../../shared/api/client"
 
 export function getMe(token) {
-    return apiFetch('/users/me', {token})
+    return apiFetch('/users/me', { token })
 }
